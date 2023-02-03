@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Document</title>
+    <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="productlist.css" />
+  </head>
+  <body>
+    <head>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <p>Fashion<span>R</span>Us</p>
+          </a>
+        </div>
+        <ul>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="">Brands</a></li>
+          <li><a href="">Seasons</a></li>
+        </ul>
+      </nav>
+    </head>
+    <main>
+      <div>
+        <ol class="breadcrumb_trail">
+          <li><a href="index.html">Home/</a></li>
+          <li><a href="category.html">Category/</a></li>
+          <li class="this_breadcrumb"><a href="productlist.html">Accessories</a></li>
+        </ol>
+      </div>
+      <h1>Accessories</h1>
+      <div class="filter">
+        <form>
+          <p>Filter</p>
+          <label>
+            <select name="filter_organize" id="filter_organize">
+              <option value="Sort After">Sort After</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Newest Arrival">Newest Arrival</option>
+              <option value="Price Low to High">Price Low to High</option>
+              <option value="Price High to low">Price High to Low</option>
+            </select>
+          </label>
+        </form>
+        <div class="filter_price">
+          <p>Pricerange</p>
+          <input type="range" min="1" max="1000" value="50" class="slider" id="myRange" />
+        </div>
+        <form>
+          <p>Size</p>
+          <label for="34"> <input id="34" type="checkbox" name="size" value="34" />34 </label>
+          <label for="36"> <input id="36" type="checkbox" name="size" value="36" />36 </label>
+          <label for="38"> <input id="38" type="checkbox" name="size" value="38" />38 </label>
+        </form>
+      </div>
+      <div class="list_grid">
+        <article class="firstView_product">
+          <figure class="fv_product_img">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp" alt="Grey Leaping Cat T-shirt" />
+          </figure>
+          <div>
+            <h2>Grey Leaping Cat T-shirt</h2>
+            <p class="subtle">T-shirt | Puma</p>
+            <div class="price_boxSize">
+              <p class="price current_price">
+                <!-- <span class="prev.">Prev.</span> -->
+                899 DKK
+              </p>
+              <!-- <template class="discount">
+                <p>Now pris</p>
+                <span>-rabat%</span>
+              </template> -->
+              <a href="product.html">Read More</a>
+            </div>
+          </div>
+        </article>
+        <article class="firstView_product">
+          <figure class="fv_product_img">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/1531.webp" alt="Grey Solid Round Neck T-Shirt" />
+          </figure>
+          <div>
+            <h2>Grey Solid Round Neck T-Shirt</h2>
+            <p class="subtle">T-shirt | Puma</p>
+            <div class="price_boxSize">
+              <p class="price current_price">
+                <!-- <span class="prev.">Prev.</span> -->
+                799 DKK
+              </p>
+              <!-- <template class="discount">
+                <p>Now pris</p>
+                <span>-rabat%</span>
+              </template> -->
+              <a href="product.html">Read More</a>
+            </div>
+          </div>
+        </article>
+        <article class="firstView_product onSale">
+          <figure class="fv_product_img">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/1528.webp" alt="Black Fleece Jacket" />
+          </figure>
+          <div>
+            <h2>Black Fleece Jacket</h2>
+            <p class="subtle">Jacket | Topwear</p>
+            <div class="price_boxSize">
+              <p class="price">
+                <span class="prev.">Prev.</span>
+                3999 DK
+              </p>
+              <p class="current_price">Now 2039,49 DKK</p>
+              <div class="discount_tag">- 49%</div>
+              <a href="product.html">Read More</a>
+            </div>
+          </div>
+        </article>
+        <article class="firstView_product soldOut onSale">
+          <figure class="fv_product_img">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/1530.webp" alt="Track Jacket" />
+          </figure>
+          <div>
+            <h2>Track Jacket</h2>
+            <p class="subtle">Jacket | Puma</p>
+            <div class="price_boxSize">
+              <p class="price">
+                <span class="prev.">Prev.</span>
+                4299 DKK
+              </p>
+              <p class="current_price">Now 1299 DKK</p>
+              <div class="discount_tag">
+                <p>- 57%</p>
+              </div>
+              <a href="product.html">Read More</a>
+            </div>
+          </div>
+        </article>
+        <article class="firstView_product soldOut">
+          <figure class="fv_product_img">
+            <img src="https://kea-alt-del.dk/t7/images/webp/640/1529.webp" alt="Tee" />
+          </figure>
+          <div>
+            <h2>Tee</h2>
+            <p class="subtle">T-shirt | Puma</p>
+            <div class="price_boxSize">
+              <p class="price current_price">
+                <!-- <span class="prev.">Prev.</span> -->
+                1899 DKK
+              </p>
+              <!-- <template class="discount">
+                <p>Now pris</p>
+                <span>-rabat%</span>
+              </template> -->
+              <a href="product.html">Read More</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

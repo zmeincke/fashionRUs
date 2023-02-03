@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: rgb(19, 19, 19);
+  background-color: rgb(245, 242, 242);
+  margin: 20px;
+
+  /*costum properties*/
+  --main-text-color: rgb(19, 19, 19);
+  --main-bg-color: rgb(245, 242, 242);
+  --subtle-text-color: rgb(188, 183, 183);
+  --underline-color: rgb(191, 189, 189);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product_show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.product_show img {
+  grid-column: 1/2;
+  max-width: 500px;
+}
+.product_show section {
+  grid-column: 2/3;
+}
+h1 {
+  font-size: 3rem;
+}
+.subtle {
+  font-size: 1.2rem;
+}
+.info h4 {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--subtle-text-color);
+  padding: 20px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  gap: 10px;
+}
+label {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+select {
+  padding: 8px 30px 8px 10px;
+  margin-left: 10px;
+  color: rgb(54, 54, 54);
+  border: none;
+  border-radius: 10px;
+}
+button {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 20px 100px;
+  border: none;
+  border-radius: 10px;
+  /*color theme for in active*/
+  color: var(--subtle-text-color);
+  background-color: rgba(119, 118, 118, 0.368);
+}

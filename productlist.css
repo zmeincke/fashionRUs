@@ -23,6 +23,7 @@ img {
   height: auto;
   display: block;
 }
+
 .filter {
   display: flex;
   gap: 30px;
@@ -46,6 +47,7 @@ img {
 }
 .firstView_product h2 {
   font-size: 1.2rem;
+  text-transform: capitalize;
 }
 .fv_product_img {
   min-height: 350px;

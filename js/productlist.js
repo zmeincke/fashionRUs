@@ -35,6 +35,20 @@ function sorting() {
       return 0;
     });
   }
+  if (this.value == "Z-A") {
+    products.sort((a, b) => {
+      const nameA = a.productdisplayname.toUpperCase(); // ignore upper and lowercase
+      const nameB = b.productdisplayname.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return 1;
+      }
+      if (nameA > nameB) {
+        return -1;
+      }
+      // names must be equal
+      return 0;
+    });
+  }
   console.log(products);
   showProducts();
 }

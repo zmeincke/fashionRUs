@@ -61,7 +61,7 @@ img {
   text-decoration-thickness: 2px;
   text-decoration-color: var(--underline-color);
 }
-/*------------discount--------------*/
+/*------------onSale--------------*/
 .price_boxSize {
   min-height: 100px;
   max-height: 100px;
@@ -75,12 +75,13 @@ img {
 .price_boxSize a {
   grid-row: 3/4;
 }
-.current_price {
+.discount_price .current_price {
   font-weight: bolder;
   font-size: 1.1rem;
   grid-row: 2/3;
 }
 .discount_tag {
+  display: block;
   background-color: rgb(237, 48, 48);
   color: white;
   font-weight: bolder;
@@ -96,7 +97,8 @@ img {
 }
 /*------------sold out--------------*/
 .soldOut img {
-  filter: opacity(50%);
+  /* filter: opacity(50%); */
+  filter: grayscale(100%);
 }
 /* .soldout_tag {
   grid-row: 1/2;
@@ -112,10 +114,11 @@ article.soldOut::before {
   font-size: 1.5rem;
   position: absolute;
   /* margin-top: 330px; */
-  background: rgb(228, 217, 217);
+  background: rgba(178, 178, 178, 0.093);
   color: var(--subtle-text-color);
   padding: 20px 98px;
   margin-top: 190px;
+  z-index: 1;
   /* padding: 10px 10px;
   margin: 20px 0px 0px 190px;
   border-radius: 20px; */

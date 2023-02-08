@@ -34,4 +34,5 @@ ul.category_list > li > a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  font-size: 1.5rem;
 }

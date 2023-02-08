@@ -58,45 +58,51 @@
         </form>
       </div>
       <div class="list_grid">
-        <article class="firstView_product">
-          <figure class="fv_product_img">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp" alt="Grey Leaping Cat T-shirt" />
-          </figure>
-          <div>
-            <h2>Grey Leaping Cat T-shirt</h2>
-            <p class="subtle">T-shirt | Puma</p>
-            <div class="price_boxSize">
-              <p class="price current_price">
-                <!-- <span class="prev.">Prev.</span> -->
-                899 DKK
-              </p>
-              <!-- <template class="discount">
-                <p>Now pris</p>
-                <span>-rabat%</span>
-              </template> -->
-              <a href="product.html">Read More</a>
+        <template id="firstView_product_template">
+          <article class="firstView_product">
+            <a class="read_more" href="#">
+              <figure class="fv_product_img">
+                <img src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp" alt="Grey Leaping Cat T-shirt" />
+              </figure>
+            </a>
+            <div>
+              <h2>Grey Leaping Cat T-shirt</h2>
+              <p class="subtle"><span class="articletype">T-shirt</span> | <span class="brand">Puma</span></p>
+              <div class="price_boxSize">
+                <p class="price current_price">
+                  <span class="prev.">Prev.</span>
+                  899 DKK
+                </p>
+                <div class="discount_price">
+                  <p class="current_price">Now 1299 DKK</p>
+                </div>
+                <div class="discount_tag">
+                  <p class="discount">- 57%</p>
+                </div>
+                <a class="read_more" href="product.html">Read More</a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="firstView_product">
-          <figure class="fv_product_img">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1531.webp" alt="Grey Solid Round Neck T-Shirt" />
-          </figure>
-          <div>
-            <h2>Grey Solid Round Neck T-Shirt</h2>
-            <p class="subtle">T-shirt | Puma</p>
-            <div class="price_boxSize">
-              <p class="price current_price">
-                <!-- <span class="prev.">Prev.</span> -->
-                799 DKK
-              </p>
-              <!-- <template class="discount">
-                <p>Now pris</p>
-                <span>-rabat%</span>
-              </template> -->
-              <a href="product.html">Read More</a>
+          </article>
+        </template>
+        <!-- <article class="firstView_product">
+            <figure class="fv_product_img">
+              <img src="https://kea-alt-del.dk/t7/images/webp/640/1531.webp" alt="Grey Solid Round Neck T-Shirt" />
+            </figure>
+            <div>
+              <h2>Grey Solid Round Neck T-Shirt</h2>
+              <p class="subtle">T-shirt | Puma</p>
+              <div class="price_boxSize">
+                <p class="price current_price">
+                  <span class="prev.">Prev.</span>
+                  799 DKK
+                </p>
+                <template class="discount">
+                  <p>Now pris</p>
+                  <span>-rabat%</span>
+                </template>
+                <a href="product.html">Read More</a>
+              </div>
             </div>
-          </div>
         </article>
         <article class="firstView_product onSale">
           <figure class="fv_product_img">
@@ -145,17 +151,18 @@
             <p class="subtle">T-shirt | Puma</p>
             <div class="price_boxSize">
               <p class="price current_price">
-                <!-- <span class="prev.">Prev.</span> -->
+                <span class="prev.">Prev.</span>
                 1899 DKK
               </p>
-              <!-- <template class="discount">
+              <template class="discount">
                 <p>Now pris</p>
                 <span>-rabat%</span>
-              </template> -->
+              </template>
               <a href="product.html">Read More</a>
           </div>
-        </article>
+        </article> -->
       </div>
     </main>
+    <script src="js/productlist.js"></script>
   </body>
 </html>

@@ -1,17 +1,45 @@
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
+let products = [];
 
 fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=20`)
   .then((response) => response.json())
-  .then(showProducts);
+  .then((data) => {
+    //laver et global variabel (alle kan til gå den)
+    products = data;
+    showProducts();
+  });
 
-function showProducts(products) {
+function showProducts() {
+  document.querySelector(".list_grid").innerHTML = "";
   //looper og kalder showProduct
   products.forEach(showProduct);
 }
 
+document.querySelector("#filter_organize").addEventListener("change", sorting);
+
+function sorting() {
+  console.log(this.value);
+  // sort by productdisplayname
+  if (this.value == "A-Z") {
+    products.sort((a, b) => {
+      const nameA = a.productdisplayname.toUpperCase(); // ignore upper and lowercase
+      const nameB = b.productdisplayname.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      // names must be equal
+      return 0;
+    });
+  }
+  console.log(products);
+  showProducts();
+}
+
 function showProduct(product) {
-  console.log(product);
   //fang template
   const template = document.querySelector("#firstView_product_template").content;
   //lav kopi
@@ -45,6 +73,6 @@ function showProduct(product) {
   //   if (product.soldout) {
   //     copy.querySelector("#status").classList.add(".soldout");
   //   }
-  //append
+  //append (sæt ind)
   document.querySelector(".list_grid").appendChild(copy);
 }

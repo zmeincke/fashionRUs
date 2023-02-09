@@ -62,21 +62,22 @@ function showProduct(product) {
   copy.querySelector("h2").textContent = product.productdisplayname;
   copy.querySelector(".articletype").textContent = product.articletype;
   copy.querySelector(".brand").textContent = product.brandname;
-  copy.querySelector(".current_price").textContent = `DKK ${product.price},-`;
+  copy.querySelector(".price").textContent = `DKK ${product.price},-`;
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector(".read_more").setAttribute("href", `product.html?id=${product.id}`);
 
   //onSale
-  /* if (product.onsale) {
+  if (product.discount) {
     copy.querySelector("article").classList.add("onSale");
-    // copy.querySelector("article").classList.add("discount_tag");
-    // copy.querySelector("article").classList.add("current_price");
-    copy.querySelector("p.discount").textContent = `"-" ${product.discount}`;
+    copy.querySelector(".discount_tag").classList.add("show_discount_tag");
+    copy.querySelector(".discount_price").classList.add("show_discount_price");
+    let newPrice = product.price - (product.price * product.discount) / 100;
+    copy.querySelector(".discount_price").textContent = `DKK ${newPrice},-`;
+    copy.querySelector("p.discount").textContent = `- ${product.discount}%`;
     console.log("added discount");
   } else {
-    //copy.querySelector("article").remove("onSale");
-    copy.querySelector("article").classList.add("firstview_product");
-  } */
+    copy.querySelector(".price").classList.add("current_price");
+  }
 
   // soldOut
   if (product.soldout) {

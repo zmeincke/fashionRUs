@@ -77,12 +77,25 @@ img {
 .price_boxSize a {
   grid-row: 3/4;
 }
-.discount_price .current_price {
+.discount_price {
+  display: none;
+}
+.show_discount_price {
+  display: block;
+  display: contents;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  grid-row: 2/3;
+}
+.current_price {
   font-weight: bolder;
   font-size: 1.1rem;
   grid-row: 2/3;
 }
 .discount_tag {
+  display: none;
+}
+.show_discount_tag {
   display: block;
   background-color: rgb(237, 48, 48);
   color: white;

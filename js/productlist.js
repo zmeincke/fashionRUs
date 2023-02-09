@@ -68,12 +68,14 @@ function showProduct(product) {
 
   //onSale
   if (product.discount) {
-    copy.querySelector("article").classList.add("onSale");
     copy.querySelector(".discount_tag").classList.add("show_discount_tag");
-    copy.querySelector(".discount_price").classList.add("show_discount_price");
-    let newPrice = product.price - (product.price * product.discount) / 100;
-    copy.querySelector(".discount_price").textContent = `DKK ${newPrice},-`;
     copy.querySelector("p.discount").textContent = `- ${product.discount}%`;
+    copy.querySelector(".discount_price").classList.add("show_discount_price");
+    //calculate new price by the formula:    originalPrice - (originalPrice*discount)/100
+    let newPrice = product.price - (product.price * product.discount) / 100;
+    //replace with the discountet price and round off the number to two decimals
+    copy.querySelector(".discount_price").textContent = `DKK ${Math.round((newPrice + Number.EPSILON) * 100) / 100},-`;
+
     console.log("added discount");
   } else {
     copy.querySelector(".price").classList.add("current_price");
